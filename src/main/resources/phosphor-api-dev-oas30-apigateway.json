@@ -1,0 +1,514 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "phosphor-api",
+    "version": "2019-06-18T17:39:15Z"
+  },
+  "servers": [
+    {
+      "url": "https://tfd9kkgpsk.execute-api.us-east-2.amazonaws.com/{basePath}",
+      "variables": {
+        "basePath": {
+          "default": "/dev"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/jira": {
+      "options": {
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200",
+              "responseParameters": {
+                "method.response.header.Access-Control-Allow-Methods": "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'",
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
+              }
+            }
+          },
+          "requestTemplates": {
+            "application/json": "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior": "when_no_match",
+          "type": "mock"
+        }
+      }
+    },
+    "/github/{name}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "uri": "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:701759196663:function:phosphor-devOpsMetrics/invocations",
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "contentHandling": "CONVERT_TO_TEXT",
+          "type": "aws_proxy"
+        }
+      },
+      "options": {
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "uri": "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:701759196663:function:phosphor-devOpsMetrics/invocations",
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "contentHandling": "CONVERT_TO_TEXT",
+          "type": "aws_proxy"
+        }
+      }
+    },
+    "/jira/{name}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "uri": "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:701759196663:function:phosphor-devOpsMetrics/invocations",
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "contentHandling": "CONVERT_TO_TEXT",
+          "type": "aws_proxy"
+        }
+      },
+      "options": {
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200",
+              "responseParameters": {
+                "method.response.header.Access-Control-Allow-Methods": "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'",
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
+              }
+            }
+          },
+          "requestTemplates": {
+            "application/json": "{\"statusCode\": 200}"
+          },
+          "passthroughBehavior": "when_no_match",
+          "type": "mock"
+        }
+      }
+    },
+    "/github": {
+      "options": {
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Empty"
+                }
+              }
+            }
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "uri": "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:701759196663:function:phosphor-devOpsMetrics/invocations",
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "contentHandling": "CONVERT_TO_TEXT",
+          "type": "aws_proxy"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Empty": {
+        "title": "Empty Schema",
+        "type": "object"
+      }
+    }
+  },
+  "x-amazon-apigateway-documentation": {
+    "version": "3",
+    "createdDate": "2019-06-18T21:41:07Z",
+    "documentationParts": [
+      {
+        "location": {
+          "type": "MODEL",
+          "name": "Empty"
+        },
+        "properties": {
+          "title": "Empty Schema"
+        }
+      },
+      {
+        "location": {
+          "type": "PATH_PARAMETER",
+          "path": "/github/{name}",
+          "method": "GET",
+          "name": "eaadscommits"
+        },
+        "properties": {
+          "desc": {
+            "type": "PATH_PARAMETER",
+            "path": "github/{name}",
+            "method": "GET",
+            "name": "eaadscommits"
+          }
+        }
+      },
+      {
+        "location": {
+          "type": "PATH_PARAMETER",
+          "path": "/jira/{name}",
+          "method": "GET",
+          "name": "pointscompleted"
+        },
+        "properties": {
+          "desc": {
+            "type": "PATH_PARAMETER",
+            "path": "jira/{name}",
+            "method": "GET",
+            "name": "pointscompleted"
+          }
+        }
+      },
+      {
+        "location": {
+          "type": "PATH_PARAMETER",
+          "path": "/jira/{name}",
+          "method": "GET",
+          "name": "pointsinprogress"
+        },
+        "properties": {
+          "desc": {
+            "type": "PATH_PARAMETER",
+            "path": "jira/{name}",
+            "method": "GET",
+            "name": "pointsinprogress"
+          }
+        }
+      },
+      {
+        "location": {
+          "type": "PATH_PARAMETER",
+          "path": "/github/{name}",
+          "method": "GET",
+          "name": "repocommits"
+        },
+        "properties": {
+          "desc": {
+            "type": "PATH_PARAMETER",
+            "path": "github/{name}",
+            "method": "GET",
+            "name": "repocommitts"
+          }
+        }
+      },
+      {
+        "location": {
+          "type": "PATH_PARAMETER",
+          "path": "/jira/{name}",
+          "method": "GET",
+          "name": "sprintburndown"
+        },
+        "properties": {
+          "desc": {
+            "type": "PATH_PARAMETER",
+            "path": "jira/{name}",
+            "method": "GET",
+            "name": "sprintburndown"
+          }
+        }
+      },
+      {
+        "location": {
+          "type": "PATH_PARAMETER",
+          "path": "/jira/{name}",
+          "method": "GET",
+          "name": "sprints"
+        },
+        "properties": {
+          "desc": {
+            "type": "PATH_PARAMETER",
+            "path": "jira/{name}",
+            "method": "GET",
+            "name": "sprints"
+          }
+        }
+      },
+      {
+        "location": {
+          "type": "PATH_PARAMETER",
+          "path": "/jira/{name}",
+          "method": "GET",
+          "name": "targetvelocity"
+        },
+        "properties": {
+          "desc": {
+            "type": "PATH_PARAMETER",
+            "path": "jira/{name}",
+            "method": "GET",
+            "name": "targetvelocity"
+          }
+        }
+      },
+      {
+        "location": {
+          "type": "PATH_PARAMETER",
+          "path": "/github/{name}",
+          "method": "GET",
+          "name": "topcommitter"
+        },
+        "properties": {
+          "desc": {
+            "type": "PATH_PARAMETER",
+            "path": "github/{name}",
+            "method": "GET",
+            "name": "topcommitter"
+          }
+        }
+      },
+      {
+        "location": {
+          "type": "PATH_PARAMETER",
+          "path": "/jira/{name}",
+          "method": "GET",
+          "name": "topresolvers"
+        },
+        "properties": {
+          "desc": {
+            "type": "PATH_PARAMETER",
+            "path": "jira/{name}",
+            "method": "GET",
+            "name": "topresolvers"
+          }
+        }
+      },
+      {
+        "location": {
+          "type": "RESPONSE",
+          "path": "/github/{name}",
+          "method": "GET",
+          "statusCode": "200"
+        },
+        "properties": {
+          "description": "200 response"
+        }
+      },
+      {
+        "location": {
+          "type": "RESPONSE",
+          "path": "/github/{name}",
+          "method": "OPTIONS",
+          "statusCode": "200"
+        },
+        "properties": {
+          "description": "200 response"
+        }
+      },
+      {
+        "location": {
+          "type": "RESPONSE",
+          "path": "/github",
+          "method": "OPTIONS",
+          "statusCode": "200"
+        },
+        "properties": {
+          "description": "200 response"
+        }
+      },
+      {
+        "location": {
+          "type": "RESPONSE",
+          "path": "/jira/{name}",
+          "method": "GET",
+          "statusCode": "200"
+        },
+        "properties": {
+          "description": "200 response"
+        }
+      },
+      {
+        "location": {
+          "type": "RESPONSE",
+          "path": "/jira/{name}",
+          "method": "OPTIONS",
+          "statusCode": "200"
+        },
+        "properties": {
+          "description": "200 response"
+        }
+      },
+      {
+        "location": {
+          "type": "RESPONSE",
+          "path": "/jira",
+          "method": "OPTIONS",
+          "statusCode": "200"
+        },
+        "properties": {
+          "description": "200 response"
+        }
+      }
+    ]
+  }
+}
