@@ -68,5 +68,25 @@ public class DevOpsMetricsLambdaTest {
 		
 	}
 	
+	@Ignore
+	@Test
+	public void testSprintBurndown() throws Exception {
+		Request req = new Request();
+	
+		Map<String, String> pathParams = new HashMap<String, String>();	
+		pathParams.put("name", "sprintburndown");
+		
+		req.setPathParameters(pathParams);
+		req.setHttpMethod("GET");
+		
+		Response<Object> res = lambda.handleRequest(req, null);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String result = mapper.writeValueAsString(res);
+		
+		System.out.println(result);
+		
+	}
+	
 
 }

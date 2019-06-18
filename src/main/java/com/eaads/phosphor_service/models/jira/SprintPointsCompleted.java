@@ -17,7 +17,7 @@ import javax.persistence.SqlResultSetMapping;
                fields = {
             		   @FieldResult(name = "completedPoints", column = "completed")
         				})})
-@NamedNativeQuery(name="getCompletedPoints",
+@NamedNativeQuery(name="getPointsCompleted",
 resultSetMapping="CompletedPointsMapping", 
 query="SELECT SUM(points) AS completed\n" + 
 		"FROM jira_issues AS i\n" + 

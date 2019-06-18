@@ -20,7 +20,7 @@ import javax.persistence.SqlResultSetMapping;
         				@FieldResult(name = "time", column = "time"),
         				@FieldResult(name = "points", column = "Points")
         				})})
-@NamedNativeQuery(name="getBurnDown",
+@NamedNativeQuery(name="getSprintBurndown",
 resultSetMapping="BurnDownMapping", 
 query="SELECT date_trunc('minute', b.timestamp) AS time,\n" + 
 		"max(b.value) AS Points\n" + 
