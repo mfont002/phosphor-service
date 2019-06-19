@@ -1,0 +1,3 @@
+
+2019-06-17 11:18:43 put_parameter Complete.
+2019-06-17 11:18:43 {'Version': 47, 'ResponseMetadata': {'RequestId': 'fb7d280d-18af-4f51-a70d-5b4b4182616f', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'fb7d280d-18af-4f51-a70d-5b4b4182616f', 'content-type': 'application/x-amz-json-1.1', 'content-length': '14', 'date': 'Mon, 17 Jun 2019 15:18:38 GMT'}, 'RetryAttempts': 0}}

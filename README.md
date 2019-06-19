@@ -5,6 +5,7 @@ Tech-stack for this project includes:
 
     AWS Lambda function
     API-Gateway
+    SSM
     Spring Boot
     JPA/Hibernate
 
