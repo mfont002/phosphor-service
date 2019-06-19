@@ -16,7 +16,6 @@ that points to your lambda function.
 
 Example curl statements:
 
-    curl -X GET 'https://tfd9kkgpsk.execute-api.us-east-2.amazonaws.com/dev/jira/repocommits'  -H 'content-type: application/json'
     curl -X GET 'https://tfd9kkgpsk.execute-api.us-east-2.amazonaws.com/dev/jira/pointsinprogress'  -H 'content-type: application/json'
     curl -X GET 'https://tfd9kkgpsk.execute-api.us-east-2.amazonaws.com/dev/jira/sprintburndown'  -H 'content-type: application/json'
     curl -X GET 'https://tfd9kkgpsk.execute-api.us-east-2.amazonaws.com/dev/jira/sprints'  -H 'content-type: application/json'
