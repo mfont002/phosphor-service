@@ -24,5 +24,6 @@ Example curl statements:
     curl -X GET 'https://tfd9kkgpsk.execute-api.us-east-2.amazonaws.com/dev/github/eaadscommits'  -H 'content-type: application/json'
     curl -X GET 'https://tfd9kkgpsk.execute-api.us-east-2.amazonaws.com/dev/jira/topresolvers'  -H 'content-type: application/json'
     curl -X GET 'https://tfd9kkgpsk.execute-api.us-east-2.amazonaws.com/dev/jira/pointscompleted'  -H 'content-type: application/json'
+    curl -X GET 'https://tfd9kkgpsk.execute-api.us-east-2.amazonaws.com/dev/jira/repocommits'  -H 'content-type: application/json'
 
 
