@@ -19,7 +19,7 @@ github3.py==1.1.0
 idna==2.6
 itsdangerous==1.1.0
 jenkinsapi==0.3.6
-Jinja2==2.10.1
+Jinja2==2.11.3
 jira==2.0.0
 jmespath==0.9.3
 jsonify==0.5
